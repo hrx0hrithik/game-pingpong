@@ -1,0 +1,34 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --hue: 200;
+    --saturation: 50%;
+    --foregrounf-color: hsl(var(--hue), var(--saturation), 75%);
+}
+
+body {
+    margin: 0;
+    background-color: #333;
+}
+
+.paddle {
+    --position: 50;
+
+
+    position: absolute;
+    background-color: white;
+    top: calc(var(--position) * 1vh);
+    transform: translate(-50%);
+    width: 1vh;
+    height: 10vh;
+}
+
+.paddle.left {
+    left: 1vw;
+}
+
+.paddle.right {
+    right: 1vw;
+}
