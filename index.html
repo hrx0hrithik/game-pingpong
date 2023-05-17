@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="script.js" type="module"></script>
     <title>Document</title>
 </head>
@@ -13,9 +14,17 @@
         <div id="player-score">0</div>
         <div id="computer-score">0</div>
     </div>
+    <div class="pause-screen" id="pause-screen">
+        <h1>Game Paused</h1>
+        <p>Your Score: <span id="player-score1">0</span></p>
+        <p>Computer Score: <span id="computer-score1">0</span></p> 
+    </div>
     <div class="ball" id="ball"></div>
     <div class="paddle left" id="player-paddle"></div>
     <div class="paddle right" id="computer-paddle"></div>
+    <button class="reset" id="reset"><span class="material-symbols-outlined" style="font-weight: bold;">replay</span></button>
+    <button class="pause" id="pause">Pause</button>
+    
     
 </body>
 </html>

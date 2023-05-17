@@ -1,4 +1,4 @@
-const INITIAL_VELOCITY = 0.045;
+const INITIAL_VELOCITY = 0.035;
 const VELOCITY_INCREASE = 0.000001;
 
 export default class Ball {
@@ -42,6 +42,7 @@ export default class Ball {
   }
 
   update(delta, paddleRects) {
+  
     this.x += this.direction.x * this.velocity * delta;
     this.y += this.direction.y * this.velocity * delta;
     this.velocity += VELOCITY_INCREASE * delta;
@@ -54,6 +55,12 @@ export default class Ball {
       this.direction.x *= -1;
     }
   }
+
+  ballPause() {
+      this.ballElem.style.setProperty("display", "none")
+  }
+  ballPlay() {
+    this.ballElem.style.setProperty("display", "block")}
 }
 
 function randomNumberBetween(min, max) {
